@@ -68,38 +68,22 @@ td
 	text-align:center;
 	border-top:none;
 	border-left:.5pt solid windowtext;
-	border-bottom:none;
-	border-right:.5pt solid windowtext;
-	background:#DDEBF7;
-	mso-pattern:black none;}
-.xl70
-	{mso-style-parent:style0;
-	text-align:center;
-	border-top:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	border-bottom:none;
-	border-right:.5pt solid windowtext;}
-.xl71
-	{mso-style-parent:style0;
-	text-align:center;
-	border-top:none;
-	border-left:.5pt solid windowtext;
 	border-bottom:.5pt solid windowtext;
 	border-right:.5pt solid windowtext;}
+.xl70
+	{mso-style-parent:style0;
+	color:#00B050;
+	font-size:16.0pt;
+	font-weight:700;}
+.xl71
+	{mso-style-parent:style0;
+	color:red;
+	font-weight:700;}
 .xl72
 	{mso-style-parent:style0;
-	text-align:right;}
+	text-align:center;
+	border:.5pt solid windowtext;}
 .xl73
 	{mso-style-parent:style0;
 	text-align:right;
-	background:#DDEBF7;
-	mso-pattern:black none;}
-.xl74
-	{mso-style-parent:style0;
-	font-family:"Times New Roman", serif;
-	mso-font-charset:0;
-	text-align:center;
-	border-top:.5pt solid windowtext;
-	border-left:.5pt solid windowtext;
-	border-bottom:none;
-	border-right:.5pt solid windowtext;}
+	border:.5pt solid windowtext;}
