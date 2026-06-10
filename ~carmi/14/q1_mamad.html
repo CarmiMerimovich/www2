@@ -58,13 +58,19 @@
     אי אפשר לבצע שינוי ישירות בטבלה פה.
     נא לשלוח אלי בווטסאפ בקשת עדכון.
 </p>
-<table>
+<p style="text-align: center;
+          color: green;
+          font-size: 200%;
+          font-weight: bold;">
+          עודכן ב 15:30 10/6/2026
+</p>
+<table id="votes">
     <thead>
         <tr>
         <th></th>
-        <th>רוצה ממד</th>
+        <th>רוצה ממ"ד</th>
         <th>לפי הרוב</th>
-        <th>לא רוצה ממד</th>
+        <th>לא רוצה ממ"ד</th>
         </tr>
     </thead>
     <tbody>
@@ -256,5 +262,22 @@
         </tr>
     </tbody>
 </table>
+<script>
+let sum = [0,0,0,0];
+const tbl = document.getElementById("votes");
+for (let i = 0; i < tbl.tBodies[0].rows.length-1; i++) {
+    const row = tbl.tBodies[0].rows[i];
+    for (let j = 1; j < row.cells.length; j++) {
+        const cell = row.cells[j];
+        if (cell.textContent.trim() != "")
+            sum[j]++;
+    }
+}
+    const row = tbl.tBodies[0].rows[tbl.tBodies[0].rows.length-1];
+    for (let j = 1; j < row.cells.length; j++) {
+        const cell = row.cells[j];
+        cell.textContent = sum[j];
+    }
+</script>
 </body>
 </html>
