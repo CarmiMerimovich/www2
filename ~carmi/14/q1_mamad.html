@@ -142,7 +142,7 @@
         <td>12</td>
         <td></td>
         <td></td>
-        <td></td>
+        <td>V</td>
         </tr>
         <tr>
         <td>13</td>
@@ -258,24 +258,49 @@
             <td></td>
             <td></td>
         </tr>
+        <tr style="border: solid lightblue;">
+            <td >סה"כ S</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr style="border: solid lightblue;">
+            <td >סה"כ N</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 <script>
 let sum = [0,0,0,0];
+let sum3 = [0,0,0,0];
+let sum4 = [0,0,0,0];
 const tbl = document.getElementById("votes");
 for (let i = 0; i < tbl.tBodies[0].rows.length-1; i++) {
     const row = tbl.tBodies[0].rows[i];
     for (let j = 1; j < row.cells.length; j++) {
         const cell = row.cells[j];
-        if (cell.textContent.trim() != "")
+        if (cell.textContent.trim() != "") {
             sum[j]++;
+            if ((i % 4) < 2)
+                sum3[j]++;
+            else
+                sum4[j]++;
+        }
     }
 }
-    const row = tbl.tBodies[0].rows[tbl.tBodies[0].rows.length-1];
-    for (let j = 1; j < row.cells.length; j++) {
-        const cell = row.cells[j];
-        cell.textContent = sum[j];
-    }
+const row = tbl.tBodies[0].rows[tbl.tBodies[0].rows.length-3];
+const row3 = tbl.tBodies[0].rows[tbl.tBodies[0].rows.length-2];
+const row4 = tbl.tBodies[0].rows[tbl.tBodies[0].rows.length-1];
+for (let j = 1; j < row.cells.length; j++) {
+    const cell  = row.cells[j];
+    const cell3 = row3.cells[j];
+    const cell4 = row4.cells[j];
+    cell.textContent  = sum[j];
+    cell3.textContent = sum3[j];
+    cell4.textContent = sum4[j];
+}
 </script>
 </body>
 </html>
